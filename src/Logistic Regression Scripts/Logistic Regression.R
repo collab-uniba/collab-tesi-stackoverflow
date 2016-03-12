@@ -1,4 +1,6 @@
-set <- read.csv(file="/home/giuseppe/TesiStackExchange/AskUbuntu/Dataset/metrics_for_regression.csv", sep=";", na.strings=c(""))
+#Compute the logistic regression
+
+set <- read.csv(file="path/metrics_for_regression.csv", sep=";", na.strings=c(""))
 
 train.data <- set
 
@@ -33,6 +35,6 @@ no_rounded_table <- table
 table$estimates <- round(table$estimates, 2)
 table$oddsratio <- round(table$oddsratio, 2)
 
-write.table(file="/home/giuseppe/TesiStackExchange/AskUbuntu/Dataset/no_rounded_results_table.csv", sep=";", x = no_rounded_table, row.names = T)
-write.table(file="/home/giuseppe/TesiStackExchange/AskUbuntu/Dataset/results_table.csv", sep=";", x = table, row.names = T)
+#write.table(file="path/no_rounded_results_table.csv", sep=";", x = no_rounded_table, row.names = T)
+#write.table(file="path/results_table.csv", sep=";", x = table, row.names = T)
 

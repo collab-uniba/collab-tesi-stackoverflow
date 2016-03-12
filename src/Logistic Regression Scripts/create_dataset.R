@@ -1,6 +1,8 @@
 library(arules)
 
-set <- read.csv(file="/home/giuseppe/TesiStackExchange/AskUbuntu/Dataset/final_metrics.csv", sep=";")
+#Prepare the dataset for the logistic regression.
+
+set <- read.csv(file="path/final_metrics.csv", sep=";")
 
 sentPositive <- set$SentimentPositiveScore
 sentNegative <- set$SentimentNegativeScore
@@ -63,7 +65,7 @@ set$NTag[set$NTag <= 1] <- "Single"
 set$BodyLength <- discretize(bodyLength, method="cluster", labels=c("Short","Medium","Long"))
 set$TitleLength <- discretize(titleLength, method="cluster", labels=c("Short","Medium","Long"))
 
-write.table(file="/home/giuseppe/TesiStackExchange/AskUbuntu/Dataset/metrics_for_regression.csv", sep=";", x = set, row.names = F)
+write.table(file="path/metrics_for_regression.csv", sep=";", x = set, row.names = F)
 
 
 
