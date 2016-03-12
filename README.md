@@ -8,6 +8,8 @@ Il progetto contiene 2 cartelle principali:
 
 `stackexchange-metrics-calculator` contiene un progetto [SBT](http://www.scala-sbt.org/) che implementa script, librerie e l'actor system in Scala per il calcolo delle metriche. Molti degli script presenti nella cartella `database` utilizzano gli script definiti in questo progetto.
 
+`src` contiene gli script utilizzati nell'analisi dei siti Ask Ubuntu, Server Fault e Super User. In particolare, `Create Dataset Scripts`contiene gli script utilizzati per creare il dataset analizzato, mentre `Logistic Regression Scripts` contiene gli script utilizzati per la regressione logistica.
+
 ## Requisiti
 L'unico requisito per far funzionare gli script del progetto è quello di avere installato sulla propria macchina [SBT](http://www.scala-sbt.org/): il sistema di building e gestione delle dipendenze usato da [Scala](http://www.scala-lang.org/).
 
